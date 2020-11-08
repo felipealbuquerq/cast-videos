@@ -1,0 +1,19 @@
+{
+  "name": "cast-videos",
+  "version": "0.0.2",
+  "description": "CastVideos-chrome (reference Chrome sender app)",
+  "main": "cast-videos.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipealbuquerq/cast-videos.git"
+  },
+  "author": "Felipe de Almeida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipealbuquerq/cast-videos/issues"
+  },
+  "homepage": "https://github.com/felipealbuquerq/cast-videos#readme"
+}
