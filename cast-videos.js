@@ -47,7 +47,7 @@ const PLAYER_STATE = {
  *  - Current live variables for controlling UI based on ad playback
  * @struct @constructor
  */
-var CastPlayer = function () {
+export function CastPlayer() {
   /** @type {PlayerHandler} Delegation proxy for media playback */
   this.playerHandler = new PlayerHandler(this);
 
@@ -1188,9 +1188,9 @@ CastPlayer.prototype.addVideoThumbs = function () {
   }
 };
 
-CastPlayer.prototype.addMediaContents = () => {
-  if (typeof castPlayer.mediaJSON !== 'undefined' && castPlayer.mediaJSON['categories'] && castPlayer.mediaJSON['categories'].length > 0) {
-    castPlayer.mediaContents = castPlayer.mediaJSON['categories'][0]['videos'];
+CastPlayer.prototype.addMediaContents = (categories) => {
+  if (categories.length > 0) {
+    castPlayer.mediaContents = categories[0]['videos'];
     return castPlayer.mediaContents;
   } else {
     return null;
