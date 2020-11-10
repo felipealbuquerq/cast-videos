@@ -600,7 +600,6 @@ CastPlayer.prototype.selectMedia = function (mediaIndex) {
 
   let seekable_window = document.getElementById('seekable_window');
   let unseekable_overlay = document.getElementById('unseekable_overlay');
-  seekable_window.style.width = PROGRESS_BAR_WIDTH;
   unseekable_overlay.style.width = '0px';
 
   // Stop timer and reset time displays
