@@ -9,28 +9,28 @@ if (screen.width > 992) {
  * Width of progress bar in pixel
  * @const
  */
-  var PROGRESS_BAR_WIDTH = 620;
+  var PROGRESS_BAR_WIDTH = 600;
   
   /** @const {number} Time in milliseconds for minimal progress update */
-  var TIMER_STEP = 1000;
+  var TIMER_STEP = 985;
 } else if (screen.width > 460) {
   /**
  * Width of progress bar in pixel
  * @const
  */
-  var PROGRESS_BAR_WIDTH = 420;
+  var PROGRESS_BAR_WIDTH = 400;
   
   /** @const {number} Time in milliseconds for minimal progress update */
-  var TIMER_STEP = 677.42;
+  var TIMER_STEP = 585;
 } else {
   /**
  * Width of progress bar in pixel
  * @const
  */
-  var PROGRESS_BAR_WIDTH = 320;
+  var PROGRESS_BAR_WIDTH = 300;
 
   /** @const {number} Time in milliseconds for minimal progress update */
-  var TIMER_STEP = 516.13;
+  var TIMER_STEP = 485;
 }
 
 /** @const {number} Cast volume upon initial connection */
@@ -1120,14 +1120,6 @@ CastPlayer.prototype.resetVolumeSlider = function () {
  * Initialize UI components and add event listeners
  */
 CastPlayer.prototype.initializeUI = () => {
-  // Set initial values for title, subtitle, and description
-  document.getElementById('media_title').innerHTML =
-    castPlayer.mediaContents[0]['title'];
-  document.getElementById('media_subtitle').innerHTML =
-    castPlayer.mediaContents[castPlayer.currentMediaIndex]['subtitle'];
-  // document.getElementById('media_desc').innerHTML =
-  //   castPlayer.mediaContents[castPlayer.currentMediaIndex]['description'];
-
   // Add event handlers to UI components
   document.getElementById('progress_bg').addEventListener(
     'click', castPlayer.seekMedia.bind(castPlayer));

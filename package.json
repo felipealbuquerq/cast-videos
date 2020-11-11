@@ -1,6 +1,6 @@
 {
   "name": "cast-videos",
-  "version": "0.0.7",
+  "version": "0.0.11",
   "description": "CastVideos-chrome (reference Chrome sender app)",
   "main": "cast-videos.js",
   "scripts": {
