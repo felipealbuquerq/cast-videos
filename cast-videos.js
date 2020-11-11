@@ -3,14 +3,35 @@
 /** @const {string} Media source root URL */
 const MEDIA_SOURCE_ROOT = '';
 
-/**
+
+if (screen.width > 992) {
+  /**
  * Width of progress bar in pixel
  * @const
  */
-var PROGRESS_BAR_WIDTH = 620;
+  var PROGRESS_BAR_WIDTH = 620;
+  
+  /** @const {number} Time in milliseconds for minimal progress update */
+  var TIMER_STEP = 1000;
+} else if (screen.width > 460) {
+  /**
+ * Width of progress bar in pixel
+ * @const
+ */
+  var PROGRESS_BAR_WIDTH = 420;
+  
+  /** @const {number} Time in milliseconds for minimal progress update */
+  var TIMER_STEP = 677.42;
+} else {
+  /**
+ * Width of progress bar in pixel
+ * @const
+ */
+  var PROGRESS_BAR_WIDTH = 320;
 
-/** @const {number} Time in milliseconds for minimal progress update */
-var TIMER_STEP = 1000;
+  /** @const {number} Time in milliseconds for minimal progress update */
+  var TIMER_STEP = 516.13;
+}
 
 /** @const {number} Cast volume upon initial connection */
 var DEFAULT_VOLUME = 0.5;
