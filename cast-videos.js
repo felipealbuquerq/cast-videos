@@ -34,7 +34,7 @@ if (screen.width > 992) {
 }
 
 /** @const {number} Cast volume upon initial connection */
-var DEFAULT_VOLUME = 0.5;
+var DEFAULT_VOLUME = 1;
 
 /** @const {number} Height, in pixels, of volume bar */
 var FULL_VOLUME_HEIGHT = 100;
